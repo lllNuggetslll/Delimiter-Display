@@ -1,7 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 
-const App = props => (
-  <h1>Hello, {props.name || 'World'}!</h1>
-);
+import SearchBar from '../../containers/search_bar';
+import DelimiterHolder from '../../containers/delimiter_holder';
 
-export default App;
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Delimiter Display by David Nguyen</h1>
+        <SearchBar />
+        <DelimiterHolder />
+      </div>
+    );
+  }
+};
