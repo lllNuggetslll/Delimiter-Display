@@ -1,6 +1,8 @@
 const app = require('./config')();
 const routes = require('./api');
 const path = require('path');
+const cache = require('./models/cache');
+const controller = require('./models/controller');
 
 if (process.env.NODE_ENV === 'development') {
   const webpack = require('webpack');
@@ -13,7 +15,11 @@ if (process.env.NODE_ENV === 'development') {
   app.use(webpackHotMiddleware(compiler));
 }
 
+cache.getCache('./main');
 app.use('/api', routes);
+app.get('/search/:value', function(req, res) {
+  controller.getInfo(req, res);
+})
 app.get("/*", function(req, res) {
   res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });
