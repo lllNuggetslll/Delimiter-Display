@@ -9,7 +9,7 @@ const renderRow = (rowData, onSearch) => {
           key={index}
           value={row.value}
           onClick={() => onSearch(row.value, index)}
-          className={index}>
+          className='active'>
           {row.value}
         </td>
       ]);
@@ -19,7 +19,7 @@ const renderRow = (rowData, onSearch) => {
           key={index}
           value={row.value}
           onClick={() => onSearch(row.value, index)}
-          className={index}>
+          className='active'>
           {row.value}
         </td>)
     }
