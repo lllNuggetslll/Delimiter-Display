@@ -4,11 +4,11 @@ const renderDelete = (props, func) => {
   const deleteButtons = props.data.map((item, index) => {
     return (
       <th
-      value={index}
-      onClick={() => func(index)}
-      key={index}
-      className='btn-danger'>
-      DELETE
+        value={index}
+        onClick={() => func(index)}
+        key={index}
+        className='btn-danger'>
+        DELETE
       </th>
     );
   });
