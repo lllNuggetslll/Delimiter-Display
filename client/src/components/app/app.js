@@ -7,7 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>Delimiter Display by David Nguyen</h1>
+        <h1 className='jumbotron'>Delimiter Display by David Nguyen</h1>
         <SearchBar />
         <DelimiterHolder />
       </div>
